@@ -1,0 +1,55 @@
+<link rel="stylesheet" type="text/css" href="styles/contact_styles.css">
+<link rel="stylesheet" type="text/css" href="styles/contact_responsive.css">
+<section class="card">
+  <div class="contact">
+    <div class="container">
+      <div class="contact_form_container">
+        <div class="contact_title mt-5 text-center"><span></span><span></span><span></span>
+          <br>Registros
+        </div>
+        <form action="/" id="contact_form" class="contact_form">
+          <button type="submit" id="form_submit_button"
+            class="form_submit_button button">Activar<span></span><span></span><span></span></button>
+          <button type="submit" id="form_submit_button"
+            class="form_submit_button2 button">Desactivar<span></span><span></span><span></span></button>
+        </form>
+
+        <div class="row">
+          {{#each notes}}
+          <div class="col-md-3">
+
+            <div class="card mt-5 text-center">
+              <div class="card-body">
+                <h4 class="card-title d-flex justify-content-between align-items-center">
+                  NOMBRE: {{ name }} <a href="/notes/edit/{{_id}}"><i class="fas fa-edit"></i></a>
+                </h4>
+                <p>DIRECCIÓN: {{ direction }} </p>
+                <p>CATEGORÍA: {{ category }} </p>
+                <p>DESCRIPCIÓN: {{ description }} </p>
+                <!-- DELETE REQUEST -->
+                <form action="/notes/delete/{{_id}}?_method=DELETE" method="POST">
+                  <input type="hidden" name="_method" value="DELETE">
+                  <button type="submit" class="btn btn-danger btn-block btn-sm">Eliminar</button>
+                </form>
+              </div>
+            </div>
+          </div>
+          {{else}}
+          <div class="card mx-auto ">
+            <div class="card-body"><br><br><br><br><br><br>
+              <h1>Bienbenidos!{{user.name}}</h1>
+              <p clsss="lead">Todavía no hay registros.</p>
+              <a href="/notes/add" class="btn btn-success btn-block">Crear uno!</a>
+            </div>
+          </div>
+          {{/each}}
+        </div>
+
+
+
+      </div>
+    </div>
+  </div>
+  </div>
+  </div>
+</section>
