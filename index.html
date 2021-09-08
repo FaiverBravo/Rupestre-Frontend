@@ -25,6 +25,8 @@
 	<link rel="stylesheet" type="text/css" href="styles/main_styles.css">
 	<link rel="stylesheet" type="text/css" href="styles/responsive.css">
 	<link href="plugins/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+	
+
 </head>
 </head>
 
@@ -67,8 +69,8 @@
 									</div>
 								</div> -->
 								<div class="user_box ml-auto">
-									<div class="user_box_login user_box_link"><a href="#">Entrar</a></div>
-									<div class="user_box_register user_box_link"><a href="#">Registro</a></div>
+									<div class="user_box_login user_box_link"><a href="#"data-toggle="modal" data-target="#modalEntrar" data-whatever="@mdo">Entrar</a></div>
+									<div class="user_box_register user_box_link"><a href="#"data-toggle="modal" data-target="#modalRegistro" data-whatever="@mdo">Hazte anfitrión</a></div>
 								</div>
 							</div>
 						</div>
@@ -165,13 +167,19 @@
 								data-animation-out="animate-out fadeOut">
 								<h1>descubre</h1>
 								<h1>San Agustín</h1>
-								<div class="button home_slider_button">
-									<div class="button_bcg"></div><a href="mapa.html">explorar
-										mapa<span></span><span></span><span></span></a>
+
+								<div class="button home_slider_button pull-left">							
+									<div class="button_bcg"></div><a href="#" data-toggle="modal" data-target="#modalRegistro" data-whatever="@mdo">Hazte anfitrión<span></span><span></span><span></span></a>
 								</div>
+								<div class="button home_slider_button pull-right">							
+									<div class="button_bcg"></div><a href="#"data-toggle="modal" data-target="#modalEntrar" data-whatever="@mdo">prepara tu viaje<span></span><span></span><span></span></a>
+								</div>
+								
 							</div>
 						</div>
 					</div>
+
+					
 
 					<!-- Slider Item -->
 					<div class="owl-item home_slider_item">
@@ -183,8 +191,10 @@
 								<h1>descubre</h1>
 								<h1>San Agustín</h1>
 								<div class="button home_slider_button">
-									<div class="button_bcg"></div><a href="mapa.html">explorar
-										mapa<span></span><span></span><span></span></a>
+									<div class="button_bcg"></div><a href="#" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo">Hazte anfitrión<span></span><span></span><span></span></a>
+								</div>
+								<div class="button home_slider_button">
+									<div class="button_bcg"></div><a href="#"data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo">prepara tu viaje<span></span><span></span><span></span></a>
 								</div>
 							</div>
 						</div>
@@ -200,14 +210,17 @@
 								<h1>descubre</h1>
 								<h1>San Agustín</h1>
 								<div class="button home_slider_button">
-									<div class="button_bcg"></div><a href="mapa.html">explorar
-										mapa<span></span><span></span><span></span></a>
+									<div class="button_bcg"></div><a href="#" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo">Hazte anfitrión<span></span><span></span><span></span></a>
+								</div>
+								<div class="button home_slider_button">
+									<div class="button_bcg"></div><a href="#"data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo">prepara tu viaje<span></span><span></span><span></span></a>
 								</div>
 							</div>
 						</div>
 					</div>
 
 				</div>
+
 
 				<!-- Home Slider Nav - Prev -->
 				<div class="home_slider_nav home_slider_prev">
@@ -769,6 +782,78 @@
 		</div>
 
 	</div>
+	
+	<!-- Formulario de registro -->
+
+<div class="modal fade" id="modalRegistro" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+		<div class="col"><h3 class="intro_title text-center">Hazte Anfitrión</h3></div>
+	        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span>
+        	</button>		
+		</div>
+	<h5 class="col-form-label text-center">Te damos la bienvenida a Rupestre</h5>
+      
+      <div class="modal-body">
+        <form>
+          <div class="form-group">
+            <input type="text" class="form-control" id="name" placeholder="Nombre">
+          </div>
+          <div class="form-group">
+            <input type="email" class="form-control" id="email" placeholder="Correo">
+          </div>
+		  <div class="form-group">
+            <input type="password" class="form-control" id="pass" placeholder="Contraseña">
+          </div>
+          <div class="form-group">
+            <input type="confirm_password" class="form-control" id="pass" placeholder="Confirmar contraseña">
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+		<button type="submit" id="form_submit_button" class="form_submit_button button " data-dismiss="modal">Cerrar<span></span><span></span><span></span></button>
+		<button type="submit" id="form_submit_button" class="form_submit_button button btn-block">Registrarse<span></span><span></span><span></span></button>      
+		
+	</div>
+
+    </div>
+  </div>
+</div>
+
+<!-- Formulario de inicio de sesión -->
+
+<div class="modal fade" id="modalEntrar" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+	<div class="modal-dialog" role="document">
+	  <div class="modal-content">
+		<div class="modal-header">
+		  <div class="col"><h3 class="intro_title text-center">Iniciar sesión</h3></div>
+			  <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span>
+			  </button>		
+		  </div>
+	  <h5 class="col-form-label text-center">Te damos la bienvenida a Rupestre</h5>
+		
+		<div class="modal-body">
+		  <form>			
+			<div class="form-group">
+			  <label for="email" class="col-form-label">Correo</label>
+			  <input type="email" class="form-control" id="email">
+			</div>
+			<div class="form-group">
+			  <label for="pass" class="col-form-label">Contraseña</label>
+			  <input type="password" class="form-control" id="pass">
+			</div>			
+		  </form>
+		</div>
+		<div class="modal-footer">
+		  <button type="submit" id="form_submit_button" class="form_submit_button button " data-dismiss="modalRegistro" >Registrarse<span></span><span></span><span></span></button>
+		  <button type="submit" id="form_submit_button" class="form_submit_button button btn-block">Iniciar sesión<span></span><span></span><span></span></button>      
+		</div>
+		</div>
+	</div>
+  </div>
+  
+
 	
 	<!-- <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
 		integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
