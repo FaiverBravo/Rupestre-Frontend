@@ -7,20 +7,21 @@ function ajaxFunction(uri, method, async, data) {
         async: async,
         type: method,
         url: uri,
-        dataType: 'json',
-        contentType: 'application/json',
+        headers: {
+          'Content-Type': 'application/json'
+        },
         data: data ? JSON.stringify(data) : null
     }).fail(function (jqXHR, textStatus, errorThrown) {
-        console.log('Error : ' + errorThrown);
-        console.log('Error : ' + jqXHR.key);
-        console.log('Error : ' + textStatus);
+      console.log('errorThrown : ' + errorThrown);
+      console.log('jqXHR : ' + jqXHR.key);
+      console.log('textStatus : ' + textStatus);
         //  $(".alert-mensaje").html("").fadeOut()
     });
 }
 
 let UrlDom = dominio();
-let userUri = UrlDom + 'api/user';
-let anfitrionUri = UrlDom + 'api/anfitrion';
+let userUri = UrlDom + '/users/user';
+let anfitrionUri = UrlDom + '/anfitrion';
 
 $(document).ready(function(){
     $("#form_submit_button").click(function(){
@@ -28,8 +29,6 @@ $(document).ready(function(){
         var password = $("#pass").val();
         var confirm_password = $("#confirm_password").val();
         var nombres = $("#nombre").val();
-        
-
         if (nombres == "") {
             $("#nombre").focus();
             alert("Ingrese su nombre comple ¡verifique por favor!..");
@@ -56,17 +55,31 @@ $(document).ready(function(){
          // val_msg(101, "las contraseñas no coinciden ¡verifique por favor!..");
           return false
         } else {
-            var userObject = {
-                usuario:  $("#email").val(),
-                password : $("#pass").val(),
-                nombres : $("#nombre").val(),
-              };
-              ajaxFunction(userUri, 'POST', true, userObject).done(function (datajson) {
-                var array = JSON.parse(JSON.stringify(datacia.data));
-                if (datajson.code == 100) {
-
+          var userObject = {
+            idperfil: 2,
+            estado:1,
+            email:  $("#email").val(),
+            password : $("#pass").val(),
+            nombres : $("#nombre").val(),
+          };
+          console.log(userObject)
+            ajaxFunction(userUri, 'POST', true, userObject).done(function (json) {
+              var array = JSON.parse(JSON.stringify(json.data));
+              if (json.success == 100) {
+                console.log(array)
+                /* var userObject = {
+                  loginusuario_loginUsuarioID: array[0].id,
+                  anfitrionEmail: $("#email").val(),
+                  anfitrionNombres: $("#nombre").val(),
+                };
+                  ajaxFunction(anfitrionUri, 'POST', true, userObject).done(function (datajson) {
+                    var array = JSON.parse(JSON.stringify(datacia.data));
+                    if (datajson.code == 100) {
+                      console.log(array)
+                    }
+                  }) */;
                 }
              });
            }
-        });
+      });
 });
