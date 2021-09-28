@@ -13,8 +13,8 @@ var grayscale   = L.tileLayer(mbUrl, {id: 'mapbox/light-v9', tileSize: 512, zoom
 
 // Marker Turismo
 var turismoIcon = new L.Icon({
-    iconUrl: 'images/marker-icon-2x-green.png',
-    shadowUrl: 'images/marker-shadow.png',
+    iconUrl: 'images/mapa/marker-icon-2x-green.png',
+    shadowUrl: 'images/mapa/marker-shadow.png',
     iconSize: [25, 41],
     iconAnchor: [12, 41],
     popupAnchor: [1, -34],
@@ -34,8 +34,8 @@ L.marker([1.88043362, -76.30314752],{icon: turismoIcon}).bindPopup('<div align="
 
 // Marker Alojamientos
 var alojIcon = new L.Icon({
-    iconUrl: 'images/marker-icon-2x-violet.png',
-    shadowUrl: 'images/marker-shadow.png',
+    iconUrl: 'images/mapa/marker-icon-2x-violet.png',
+    shadowUrl: 'images/mapa/marker-shadow.png',
     iconSize: [25, 41],
     iconAnchor: [12, 41],
     popupAnchor: [1, -34],
@@ -49,8 +49,8 @@ L.marker([1.892315, -76.281074],{icon: alojIcon}).bindPopup('<b>Akawanka Lodge</
 
 // Marker Gastroomía
 var gastrIcon = new L.Icon({
-    iconUrl: 'images/marker-icon-2x-gold.png',
-    shadowUrl: 'images/marker-shadow.png',
+    iconUrl: 'images/mapa/marker-icon-2x-gold.png',
+    shadowUrl: 'images/mapa/marker-shadow.png',
     iconSize: [25, 41],
     iconAnchor: [12, 41],
     popupAnchor: [1, -34],
@@ -64,8 +64,8 @@ L.marker([1.88701,-76.279091],{icon: gastrIcon}).bindPopup('<div align="center"s
 
 // Marker Aventura
 var aventuraIcon = new L.Icon({
-    iconUrl: 'images/marker-icon-2x-blue.png',
-    shadowUrl: 'images/marker-shadow.png',
+    iconUrl: 'images/mapa/marker-icon-2x-blue.png',
+    shadowUrl: 'images/mapa/marker-shadow.png',
     iconSize: [25, 41],
     iconAnchor: [12, 41],
     popupAnchor: [1, -34],
@@ -79,8 +79,8 @@ L.marker([1.882963, -76.252714],{icon: aventuraIcon}).bindPopup('<b>Adrenalina E
 
 // Marker Servicios
 var serviIcon = new L.Icon({
-    iconUrl: 'images/marker-icon-2x-grey.png',
-    shadowUrl: 'images/marker-shadow.png',
+    iconUrl: 'images/mapa/marker-icon-2x-grey.png',
+    shadowUrl: 'images/mapa/marker-shadow.png',
     iconSize: [25, 41],
     iconAnchor: [12, 41],
     popupAnchor: [1, -34],
@@ -94,8 +94,8 @@ L.marker([1.881455, -76.271182],{icon: serviIcon}).bindPopup('<b>Taxis Verdes</b
 
 // Marker Tiendas
 var tiendaIcon = new L.Icon({
-    iconUrl: 'images/marker-icon-2x-orange.png',
-    shadowUrl: 'images/marker-shadow.png',
+    iconUrl: 'images/mapa/marker-icon-2x-orange.png',
+    shadowUrl: 'images/mapa/marker-shadow.png',
     iconSize: [25, 41],
     iconAnchor: [12, 41],
     popupAnchor: [1, -34],
@@ -109,8 +109,8 @@ L.marker([1.881822, -76.273193],{icon: tiendaIcon}).bindPopup('<b>Supermercado O
 
 // Marker Contacto
 var contactoIcon = new L.Icon({
-    iconUrl: 'images/marker-icon-2x-green.png',
-    shadowUrl: 'images/marker-shadow.png',
+    iconUrl: 'images/mapa/marker-icon-2x-green.png',
+    shadowUrl: 'images/mapa/marker-shadow.png',
     iconSize: [25, 41],
     iconAnchor: [12, 41],
     popupAnchor: [1, -34],
@@ -122,7 +122,7 @@ L.marker([1.8862233, -76.277418],{icon: contactoIcon}).bindPopup('<div align="ce
   
 //--Geolocalización marker"
 var geoIcon = new L.Icon({
-    iconUrl: 'images/marker-yo.png',
+    iconUrl: 'images/mapa/marker-yo.png',
     iconSize: [45, 65],
     iconAnchor: [12, 41],
     popupAnchor: [1, -34],

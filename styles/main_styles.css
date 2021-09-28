@@ -1089,7 +1089,7 @@ section
     -ms-appearance:none;
     -o-appearance:none;
     appearance:none;
-	/* -webkit-box-shadow: 0px 0px 0px rgba(0, 0, 0, 0); */
+	-webkit-box-shadow: 0px 0px 0px rgba(0, 0, 0, 0);
 	-webkit-user-select: none;
 	background-image: url(../images/dropdown.png);
 	background-position: center right;
@@ -1145,7 +1145,7 @@ section
 {
 	font-size: 30px;
 	font-weight: 700;
-	color: #2d2c2c;
+	color: #FFFFFF;
 	margin-top: -8px;
 	text-transform: uppercase;
 }
